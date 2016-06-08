@@ -8,9 +8,6 @@
 
 program calc;
 
-type
-  Real = double;
-
 const
   prs = '+-*/(';
   pri: array [1 .. 5] of byte = (1, 1, 2, 2, 0);
