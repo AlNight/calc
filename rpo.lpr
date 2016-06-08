@@ -9,20 +9,27 @@
 
 program calc;
 
+{ ---- Уберем здесь определение типа Real, т.к. в FPC он уже есть
 type
   Real = double;
+}
 
+// Здесь задаются константы
 const
-  prs = '+-*/(';
-  pri: array [1 .. 5] of byte = (1, 1, 2, 2, 0);
+  prs = '+-*/('; // Это я так понял строка с символами операций для приоритета
+  pri: array [1 .. 5] of byte = (1, 1, 2, 2, 0); // А это сам приоритет
 
+// Переменные самой программы
 var
-  s1, s2: String;
-  q: array [0 .. 500] of Real;
-  w: array [0 .. 500] of Char;
-  n, len, len2: Cardinal;
-  t: Real;
-  ch: Char;
+  s1, s2: String;   // s1 - строка для запроса выражения у пользователя
+                    // s2 - строка с итоговой записью ОБЗ
+  q: array [0 .. 500] of Real; // q -
+  w: array [0 .. 500] of Char; // w -
+  n, len, len2: Cardinal; // n - переменная для хранения длини строки, надо локально вычислять
+                          // len -
+                          // len2 -
+  t: Real;   // t -
+  ch: Char;  // ch -
 
 procedure Push(x: Real);
 begin
@@ -65,6 +72,7 @@ begin
   Oper := z;
 end;
 
+// Вот процедура предподготовки строки
 procedure PreChange(var s: String);
 var
   i: Cardinal;
@@ -72,7 +80,8 @@ begin
   if s[1] = '-' then
     s := '0' + s;
   i := 1;
-  while i <= n do
+  while i <= n do  // Зачем эта n сделана глобальной? Руки оторвать бы
+                   // длину строки можно было бы узнать и здесь
     if (s[i] = '(') and (s[i + 1] = '-') then
       insert('0', s, i + 1)
     else
@@ -184,8 +193,8 @@ end;
 begin
   repeat
     Writeln('Enter expression');
-    Readln(s1);
-    n := Length(s1);
+    Readln(s1); // Запросили строку с выражением
+    n := Length(s1); // ЗАЧЕМ? записали длину строки в n
     PreChange(s1);
     n := Length(s1);
     s2 := Change(s1);
@@ -194,6 +203,7 @@ begin
     s2 := s2 + ' ';
     n := Length(s2);
     t := Count(s2);
+    WriteLn(s2); // Это я добавил, чтобы поглядеть результат
     WriteL(t);
     Writeln('One more expression?(Y/N)');
     Readln(ch);
