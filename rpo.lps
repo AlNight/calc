@@ -10,9 +10,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="calc"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="185"/>
-        <CursorPos X="34" Y="202"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="223"/>
+        <CursorPos X="5" Y="234"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -23,11 +23,39 @@
         <UsageCount Value="10"/>
       </Unit1>
     </Units>
-    <JumpHistory Count="1">
+    <JumpHistory Count="8" HistoryIndex="7">
       <Position1>
         <Filename Value="rpo.lpr"/>
         <Caret Line="4" Column="294"/>
       </Position1>
+      <Position2>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="220" Column="13" TopLine="205"/>
+      </Position2>
+      <Position3>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="43" Column="46" TopLine="82"/>
+      </Position3>
+      <Position4>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="85" Column="11" TopLine="74"/>
+      </Position4>
+      <Position5>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="32" Column="3" TopLine="21"/>
+      </Position5>
+      <Position6>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="203" Column="11" TopLine="192"/>
+      </Position6>
+      <Position7>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="170" Column="10" TopLine="159"/>
+      </Position7>
+      <Position8>
+        <Filename Value="rpo.lpr"/>
+        <Caret Line="252" Column="3" TopLine="233"/>
+      </Position8>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
